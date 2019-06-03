@@ -1,0 +1,17 @@
+name: DeliveryAPI
+author: alvin0319
+main: Delivery\DeliveryAPI
+version: 1.0.0
+api:
+  - 4.0.0
+  - 3.0.0
+
+permissions:
+  delivery.command:
+    description: A
+    default: true
+    children:
+      delivery.command.hottime:
+        default: op
+      delivery.command.manage:
+        default: op

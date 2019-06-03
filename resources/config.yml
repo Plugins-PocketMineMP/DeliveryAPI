@@ -1,0 +1,80 @@
+# DeliveryAPI Plugin Lang storage and Settings #
+
+## KOR
+kor-delivery-prefix: §b§l[ §f택배 §b] §r§7
+
+kor-init-success: 기본 언어가 한국어(kor) 로 설정되었습니다.
+
+kor-delivery-ui-basetitle: 택배
+kor-delivery-ui-basecontent: 택배를 보내거나 받아보아요.
+
+kor-delivery-ui-button-exit: 나가기
+kor-delivery-ui-button-send: 택배 보내기
+kor-delivery-ui-button-receive: 택배함 열기
+kor-delivery-ui-button-hottime: 핫타임 관리
+
+kor-delivery-ui-send-name: 택배를 받을 사람의 이름을 넣어주세요.
+kor-delivery-ui-send-title: 택배 보내기
+
+kor-delivery-hottime-name: 핫타임때 줄 아이템의 갯수를 입력해주세요.
+kor-delivery-hottime-title: 핫타임
+
+kor-delivery-message-invalidname: 이름을 잘못 입력 하였거나, 해당 플레이어의 데이터가 없습니다.
+kor-delivery-message-invaliditem: 아이템의 아이디는 공기가 아니어야 합니다.
+kor-delivery-message-success: 성공적으로 택배를 보냈습니다.
+kor-delivery-message-target: 택배가 왔습니다!
+kor-delivery-message-sametarget: 나에게는 보낼 수 없습니다.
+
+kor-delivery-message-invalidcount: 갯수가 잘못되었습니다.
+kor-delivery-message-broadcast: 관리자가 아이템을 지급하였습니다! 택배함을 확인해보세요!
+
+kor-delivery-boxname: 의 택배함
+
+kor-command-name: 택배
+kor-command-description: 택배 명령어입니다.
+
+kor-need-update: 플러그인의 최신 버전이 감지되었습니다.
+kor-need-update-force: 플러그인을 업데이트 해야합니다. 서버 종료 후 플러그인이 업데이트 됩니다.
+kor-not-need-update: 플러그인이 최신버전입니다.
+
+
+## ENG
+eng-delivery-prefix: §b§l[ §fDelivery §b] §r§7
+
+eng-init-success: The default language is set to English(eng).
+
+eng-delivery-ui-basetitle: Delivery
+eng-delivery-ui-basecontent: Send or receive a delivery.
+
+eng-delivery-ui-button-exit: exit
+eng-delivery-ui-button-send: send delivery
+eng-delivery-ui-button-receive: open delivery
+eng-delivery-ui-button-hottime: manage enjoyable time
+
+eng-delivery-ui-send-name: Please include the name of the person who will receive the delivery.
+eng-delivery-ui-send-title: Send Delivery
+
+eng-delivery-hottime-name: Please enter the number of items to give at enjoyable time.
+eng-delivery-hottime-title: enjoyable time
+
+eng-delivery-message-invalidname: Either you entered an incorrect name or there is no data for that player.
+eng-delivery-message-invaliditem: Item ID must not be air.
+eng-delivery-message-success: Successfully sent the delivery.
+eng-delivery-message-target: Here's the delivery!
+
+eng-delivery-message-invalidcount: Invalid number.
+eng-delivery-message-broadcast: The admin has provided the item! Check the delivery box!
+
+eng-delivery-boxname: "'s delivery box"
+eng-delivery-message-sametarget: You can't send it to me.
+
+eng-command-name: delivery
+eng-command-description: Delivery command.
+
+eng-need-update: A newer version of the plugin has been detected.
+eng-need-update-force: The plugin needs to be updated. The plugin will be updated after shutting down the server.
+eng-not-need-update: The plugin is the latest version.
+
+## SETTINGS
+
+force-update: false
