@@ -3,7 +3,7 @@
   "changelog": {
     "1.0.0": {
       "message": "First Commit",
-      "force-update": false
+      "force-update": true
     }
   }
 }
