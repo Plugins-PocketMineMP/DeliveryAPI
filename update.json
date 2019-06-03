@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "changelog": {
+    "1.0.0": {
+      "message": "First Commit",
+      "force-update": false
+    }
+  }
+}
