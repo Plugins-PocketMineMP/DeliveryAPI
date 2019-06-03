@@ -33,9 +33,9 @@ kor-delivery-boxname: 의 택배함
 kor-command-name: 택배
 kor-command-description: 택배 명령어입니다.
 
-kor-need-update: 플러그인의 최신 버전이 감지되었습니다.
-kor-need-update-force: 플러그인을 업데이트 해야합니다. 서버 종료 후 플러그인이 업데이트 됩니다.
-kor-not-need-update: 플러그인이 최신버전입니다.
+kor-need-update: 최신 업데이트가 감지 되었습니다.
+kor-need-update-force: 플러그인을 업데이트 합니다. 서버가 종료됩니다...
+kor-not-need-update: 최신버전입니다.
 
 
 ## ENG
@@ -71,8 +71,8 @@ eng-delivery-message-sametarget: You can't send it to me.
 eng-command-name: delivery
 eng-command-description: Delivery command.
 
-eng-need-update: A newer version of the plugin has been detected.
-eng-need-update-force: The plugin needs to be updated. The plugin will be updated after shutting down the server.
+eng-need-update: The latest update has been detected.
+eng-need-update-force: Update the plugin. The server will shut down...
 eng-not-need-update: The plugin is the latest version.
 
 ## SETTINGS
