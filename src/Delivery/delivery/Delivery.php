@@ -20,14 +20,14 @@ class Delivery
     public function __construct(string $path, Player $player)
     {
         $this->path = $path;
-        $this->db = (new Config($path . strtolower($player->getName()) . ".yml", Config::YAML, ["item" => []]))->getAll();
+        $this->db = (new Config($path . $player->getLowerCaseName() . ".yml", Config::YAML, ["item" => []]))->getAll();
         $this->player = $player;
         $this->save();
     }
 
     public function save()
     {
-        $config = new Config($this->path . strtolower($this->player->getName()) . ".yml", Config::YAML, ["item" => []]);
+        $config = new Config($this->path . $this->player->getLowerCaseName() . ".yml", Config::YAML, ["item" => []]);
         $config->setAll($this->db);
         $config->save();
     }
