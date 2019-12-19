@@ -27,7 +27,7 @@ class CheckVersionAsyncTask extends AsyncTask
 
     public function onRun(): void
     {
-        $url = Internet::getURL("https://raw.githubusercontent.com/alvin0319/DeliveryAPI/master/update.json");
+        $url = Internet::getURL("https://raw.githubusercontent.com/Plugins-PocketMineMP/DeliveryAPI/master/update.json");
         if ($url !== false) {
             $json = json_decode($url, true);
             $lastVersion = $json['version'];
@@ -51,7 +51,7 @@ class CheckVersionAsyncTask extends AsyncTask
                 $ref = new \ReflectionClass(PluginBase::class);
                 $property = $ref->getProperty('file');
                 $property->setAccessible(true);
-                $this->recursiveUnlink($property->getValue($plugin));
+                $this->removeAll($property->getValue($plugin));
                 $file = file_get_contents('https://raw.githubusercontent.com/alvin0319/DeliveryAPI/master/DeliveryAPI.phar');
                 file_put_contents($server->getPluginPath() . "DeliveryAPI.phar", $file);
                 $server->shutdown();
@@ -61,21 +61,27 @@ class CheckVersionAsyncTask extends AsyncTask
         }
     }
 
-    public function recursiveUnlink(string $dir) : void{
-        if(is_dir($dir)){
-            $objects = scandir($dir, SCANDIR_SORT_NONE);
-            foreach($objects as $object){
-                if($object !== "." and $object !== ".."){
-                    if(is_dir($dir . "/" . $object)){
-                        self::recursiveUnlink($dir . "/" . $object);
-                    }else{
-                        unlink($dir . "/" . $object);
+    public function removeAll(string $path): void
+    {
+        if (substr($path, -1) !== "/") {
+            $path .= "/";
+        }
+        
+        if (is_dif($path)) {
+            foreach (array_diff(scandir($path), [".", ".."]) as $file) {
+                $realPath = $path . $file;
+                if (file_exists($file)) {
+                    if (is_file($realPath)) {
+                        unlink($realPath);
+                    } elseif (is_dir($realPath)) {
+                        $this->removeAll($realPath);
+                    } else {
+                        continue;
                     }
                 }
             }
-            rmdir($dir);
-        }elseif(is_file($dir)){
-            unlink($dir);
+        } else {
+            unlink($realPath);
         }
     }
 }
